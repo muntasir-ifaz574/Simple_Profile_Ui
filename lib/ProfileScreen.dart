@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -7,13 +6,12 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Stack(
       fit: StackFit.expand,
       children: [
         Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Color.fromRGBO(4, 9, 35, 1),
@@ -32,7 +30,7 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Text(
@@ -43,10 +41,10 @@ class ProfileScreen extends StatelessWidget {
                       fontSize: 34,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 22,
                   ),
-                  Container(
+                  SizedBox(
                     height: height * 0.4,
                     child: LayoutBuilder(
                       builder: (context, constraints) {
@@ -69,13 +67,14 @@ class ProfileScreen extends StatelessWidget {
                                 ),
                                 child: Column(
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 70,
                                     ),
                                     Text(
                                       'Muntasir Efaz',
                                       style: GoogleFonts.cabin(
-                                        color: Color.fromRGBO(39, 105, 171, 1),
+                                        color: const Color.fromRGBO(
+                                            39, 105, 171, 1),
                                         fontSize: 30,
                                       ),
                                     ),
@@ -105,12 +104,10 @@ class ProfileScreen extends StatelessWidget {
                               left: 0,
                               right: 0,
                               child: Center(
-                                child: Container(
-                                  child: Image.asset(
-                                    'assets/profile.png',
-                                    width: innerWidth * 0.45,
-                                    fit: BoxFit.fitWidth,
-                                  ),
+                                child: Image.asset(
+                                  'assets/profile.png',
+                                  width: innerWidth * 0.45,
+                                  fit: BoxFit.fitWidth,
                                 ),
                               ),
                             ),
